@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+canvas {
+    border: 2px solid #00FF00;
+}
+
+.score {
+    font-size: 24px;
+    margin-top: 10px;
+}
