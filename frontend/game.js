@@ -4,9 +4,13 @@ export function startGame(context) {
     const ai = { x: canvas.width - paddleWidth, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, score: 0 };
     const ball = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, speed: 5, velocityX: 5, velocityY: 5 };
 
-    document.addEventListener('mousemove', (event) => {
+    document.addEventListener('keydown', (event) => {
         const rect = canvas.getBoundingClientRect();
-        player.y = event.clientY - rect.top - player.height / 2;
+        if (event.key === 'ArrowUp' && player.y > 0) {
+            player.y -= 10; // Move up
+        } else if (event.key === 'ArrowDown' && player.y < canvas.height - player.height) {
+            player.y += 10; // Move down
+        }
     });
 
     function draw() {
