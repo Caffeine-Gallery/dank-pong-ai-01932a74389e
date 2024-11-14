@@ -19,3 +19,9 @@ canvas {
     font-size: 24px;
     margin-top: 10px;
 }
+
+.instructions {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFFF00;
+}
